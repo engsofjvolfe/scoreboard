@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Cursed';
+    src: url(assets/fonts/CursedTimerUlil-Aznm.ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
