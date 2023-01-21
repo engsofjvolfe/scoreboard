@@ -10,10 +10,27 @@
 
 :root {
   --black: #111827;
-  --gray: #a9a9a9c7;
+  --gray: #a9a9a9f8;
   --white: #e5e7eb;
   --red: #e11d48;
 }
+
+/* TYPOGRAPHY SETTINGS*/
+h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#home-points,
+#guest-points,
+.btn-home,
+.btn-guest {
+  font-family: 'Cursed', sans-serif;
+}
+
+/* END TYPOGRAPHY SETTINGS*/
 
 body {
   background-image: url(assets/images/ball.jpg);
@@ -29,13 +46,46 @@ body {
 
 .container {
   width: 75%;
+  min-width: 350px;
+  max-width: 575px;
   background-color: var(--gray);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  /* 70px  85px*/
+  padding: 4.375rem 5.3125rem;
 }
 
-@media screen and (min-width: 576px) {
+#guest-points,
+#home-points {
+  padding: 2rem 3rem;
+  /* 5px */
+  border-radius: 0.3125rem;
+  background-color: var(--black);
+  text-align: center;
+  color: var(--red);
+  /* 20px */
+  margin: 1.25rem 0;
+  font-size: 3rem;
+}
+
+.container-points > div:nth-of-type(2) {
+  margin-top: 3rem;
+}
+
+button {
+  /* 12px */
+  padding: 0.75rem;
+/* 5px */
+  border-radius: 0.3125rem;
+  background-color: transparent;
+  border-color: var(--black);
+  color: var(--black);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48rem) {
   body {
     background-image: url(assets/images/basket.jpg);
   }
+
 }
