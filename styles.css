@@ -1,35 +1,41 @@
 @font-face {
-    font-family: 'Cursed';
-    src: url(assets/fonts/CursedTimerUlil-Aznm.ttf);
+  font-family: 'Cursed';
+  src: url(assets/fonts/CursedTimerUlil-Aznm.ttf);
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --black: #111827;
-    --gray: #a9a9a9c7;
-    --white: #E5E7EB;
-    --red: #E11D48;
+  --black: #111827;
+  --gray: #a9a9a9c7;
+  --white: #e5e7eb;
+  --red: #e11d48;
 }
 
 body {
-    background-image: url(assets/images/ball.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url(assets/images/ball.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    width: 75%;
-    background-color: var(--gray);
-    display: flex;
-    justify-content: space-around;
+  width: 75%;
+  background-color: var(--gray);
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    background-image: url(assets/images/basket.jpg);
+  }
 }
