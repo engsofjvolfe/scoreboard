@@ -1,4 +1,5 @@
-let counter = 0
+let homeCounter = 0
+let guestCounter = 0
 let homePoints = document.querySelector('.home-points-p')
 let guestPoints = document.querySelector('.guest-points-p')
 let btnHome1 = document.querySelector('.hplus-1')
@@ -10,56 +11,57 @@ let btnGuest3 = document.querySelector('.gplus-3')
 
 // HOME POINTS
 btnHome1.addEventListener('click', function () {
-    add1()
-    add1ToCounter(homePoints)
+    homeCounter = add1(homeCounter)
+    homeCounter = add1ToCounter(homePoints, homeCounter)
 })
 
 btnHome2.addEventListener('click', function () {
-    add1()
-    add2ToCounter(homePoints)
+    homeCounter = add1(homeCounter)
+    homeCounter = add2ToCounter(homePoints, homeCounter)
 })
 
 btnHome3.addEventListener('click', function () {
-    add1()
-    add3ToCounter(homePoints)
+    homeCounter = add1(homeCounter)
+    homeCounter = add3ToCounter(homePoints, homeCounter)
 })
 // END HOME POINTS
 
 // GUEST POINTS
 btnGuest1.addEventListener('click', function () {
-    add1()
-    add1ToCounter(guestPoints)
+    guestCounter = add1(guestCounter)
+    guestCounter = add1ToCounter(guestPoints, guestCounter)
 })
 btnGuest2.addEventListener('click', function () {
-    add1()
-    add2ToCounter(guestPoints)
+    guestCounter = add1(guestCounter)
+    guestCounter = add2ToCounter(guestPoints, guestCounter)
 })
 btnGuest3.addEventListener('click', function () {
-    add1()
-    add3ToCounter(guestPoints)
+    guestCounter = add1(guestCounter)
+    guestCounter = add3ToCounter(guestPoints, guestCounter)
 })
 // END GUEST POINTS
 
 // FUNCTIONS
-function add1() {
+function add1(counter) {
     counter += 1
     return counter
 }
 
-function add1ToCounter(points) {
+function add1ToCounter(points, counter) {
     points.textContent = counter
+    return counter
 }
 
-function add2ToCounter(points) {
+function add2ToCounter(points, counter) {
     let add2 = counter + 1
     points.textContent = add2
-    counter = add2
+    return (counter = add2)
 }
 
-function add3ToCounter(points) {
+function add3ToCounter(points, counter) {
     let add3 = counter + 2
     points.textContent = add3
-    counter = add3
+    return (counter = add3)
 }
 
 // function subtractPoints(genericPoints, specificPoints){
